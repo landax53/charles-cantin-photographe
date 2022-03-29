@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "image_accueils",
+  "info": {
+    "singularName": "image-accueil",
+    "pluralName": "image-accueils",
+    "displayName": "image-accueil"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image_accueil": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

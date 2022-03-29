@@ -1,0 +1,126 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.1rem;
+  background: $color-3;
+}
+.navbar__links {
+  display: flex;
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  justify-content: space-between;
+  height: 45px;
+  align-items: center;
+}
+.navbar__link {
+  padding: 0 10px;
+  color: $color-1;
+  width: 25%;
+}
+
+.navbar__link-active {
+  width: 25%;
+  font-family: $font-2;
+  color: $color-1;
+}
+
+.navbar__link > a {
+  color: var(--navbar-color);
+  text-decoration: none;
+}
+.burger {
+  display: none;
+}
+
+.menu {
+  // padding-left: 100px;
+  font-size: 2rem;
+}
+
+/*  Small device */
+@media screen and (max-width: 440px) {
+  .navbar__links {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    width: 0;
+    position: absolute;
+    height: 400px;
+    top: 5px;
+    left: 0;
+    z-index: 10;
+    background: $color-3;
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+    padding: 60px 0;
+  }
+
+  /* Toggle menu */
+  .show-nav .navbar__links {
+    width: 100vw;
+  }
+  .burger {
+    z-index: 10;
+    display: block;
+    position: relative;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .bar {
+    display: block;
+    width: 45px;
+    height: 4px;
+    border-radius: 3px;
+    background: $color-1;
+    transition: all 0.5s ease-in-out;
+  }
+  .bar::before,
+  .bar::after {
+    content: "";
+    width: 45px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: $color-1;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+  }
+  .bar::before {
+    transform: translateY(-12px);
+  }
+  .bar::after {
+    transform: translateY(12px);
+  }
+  .show-nav .bar {
+    width: 0;
+    background: transparent;
+  }
+  .show-nav .bar::before {
+    transform: rotate(45deg);
+  }
+  .show-nav .bar::after {
+    transform: rotate(-45deg);
+  }
+  /* Bonus - Animations */
+  .show-nav .first,
+  .show-nav .second,
+  .show-nav .third,
+  .show-nav .four {
+    transition: all 0, 1s ease-out;
+    color: white;
+    padding: 10px 0;
+    width: 200px;
+
+    &:hover {
+      background-color: $color-1;
+    }
+  }
+}

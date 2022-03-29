@@ -1,0 +1,52 @@
+.galery {
+  .title_galery {
+    padding-bottom: 10px;
+  }
+  background-color: $color-3;
+  width: 100%;
+  padding-top: 50px;
+  color: white;
+  min-height: 100vh;
+  height: 100%;
+
+  .hrmove {
+    margin-top: 10px;
+    height: 2px;
+    width: 80%;
+    animation-name: stretch;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-delay: 0.1;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @keyframes stretch {
+    0% {
+      transform: scale(0.3);
+      background-color: #ccc;
+    }
+
+    100% {
+      background-color: #ccc;
+    }
+  }
+
+  form {
+    margin-top: 30px;
+
+    select {
+      background-color: $color-3;
+      border-radius: 10px;
+      height: 30px;
+      padding-left: 10px;
+      margin-left: 10px;
+      color: $color-1;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+}

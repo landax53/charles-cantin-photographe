@@ -1,0 +1,40 @@
+.home {
+  color: white;
+  display: flex;
+  img {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .content-home {
+    position: absolute;
+    display: flex;
+    width: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+    align-items: center;
+    .logo_home {
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 440px) {
+  .home {
+    .content-home {
+      display: block;
+      width: 330px;
+      .logo_home {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
